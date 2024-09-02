@@ -1,0 +1,14 @@
+services:
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: todoApp
+      POSTGRES_PASSWORD: 231F2DSA
+      POSTGRES_DB: todo-app
+    ports:
+      - "5433:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+volumes:
+  db-data:
